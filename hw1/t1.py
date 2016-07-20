@@ -1,6 +1,8 @@
-lst = [1, [2, 3], 4, [[6, 7]]]
+#lst = [1, [2, 3], 4, [[6, 7]]]
+def main():
+    print unlist()
 
-def unlist(l):
+def unlist(l = [[1], 2, [[3,4], 5], [[[]]], [[[6]]], 7, 8, []]):
     for i in l:
         #print i
         if isinstance(i, list):
@@ -9,5 +11,5 @@ def unlist(l):
             res.append(i)
     return res
 
-res = []
-print unlist([[1], 2, [[3,4], 5], [[[]]], [[[6]]], 7, 8, []])
+if __name__ == "__main__":
+    main()
